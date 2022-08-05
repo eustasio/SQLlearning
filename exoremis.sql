@@ -5,8 +5,10 @@ SELECT
     dc.Remise,
     CASE
         WHEN Remise = 0 THEN "aucune Remise"
-        WHEN Remise >= 0.01 <= 0.05 THEN "petite remise"
-        WHEN Remise >= 0.06 <= 0.15 THEN "remise modérée"
+        WHEN Remise BETWEEN 0.01
+        AND 0.05 THEN "petite remise"
+        WHEN Remise BETWEEN 0.06
+        AND 0.15 THEN "remise modérée"
         ELSE "Remise importante"
     END
 FROM
