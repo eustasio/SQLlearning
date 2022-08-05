@@ -1,3 +1,4 @@
+-- https: / / fxjollois.github.io / cours - SQL /
 SELECT
     DC.PrixUnit,
     DC.Remise,
