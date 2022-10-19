@@ -1,0 +1,114 @@
+
+
+============================== 2022-10-14 13:38:12.074315 | cdce034b-dbcd-48c4-a3ba-40b52c33115b ==============================
+[0m13:38:12.074320 [info ] [MainThread]: Running with dbt=1.2.1
+[0m13:38:12.074528 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/Florian/.dbt', 'send_anonymous_usage_stats': False, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m13:38:12.074595 [debug] [MainThread]: Tracking: do not track
+[0m13:38:42.397595 [debug] [MainThread]: Starter project path: /opt/homebrew/Cellar/dbt-postgres/1.2.1/libexec/lib/python3.9/site-packages/dbt/include/starter_project
+[0m13:42:57.966425 [debug] [MainThread]: Flushing usage events
+[0m13:42:57.968255 [error] [MainThread]: Encountered an error:
+
+[0m13:42:57.970513 [error] [MainThread]: Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/dbt-postgres/1.2.1/libexec/lib/python3.9/site-packages/dbt/main.py", line 129, in main
+    results, succeeded = handle_and_check(args)
+  File "/opt/homebrew/Cellar/dbt-postgres/1.2.1/libexec/lib/python3.9/site-packages/dbt/main.py", line 191, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/opt/homebrew/Cellar/dbt-postgres/1.2.1/libexec/lib/python3.9/site-packages/dbt/main.py", line 238, in run_from_args
+    results = task.run()
+  File "/opt/homebrew/Cellar/dbt-postgres/1.2.1/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 325, in run
+    adapter = self.ask_for_adapter_choice()
+  File "/opt/homebrew/Cellar/dbt-postgres/1.2.1/libexec/lib/python3.9/site-packages/dbt/task/init.py", line 255, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/opt/homebrew/Cellar/dbt-postgres/1.2.1/libexec/lib/python3.9/site-packages/click/termui.py", line 166, in prompt
+    value = prompt_func(prompt)
+  File "/opt/homebrew/Cellar/dbt-postgres/1.2.1/libexec/lib/python3.9/site-packages/click/termui.py", line 149, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+
+
+============================== 2022-10-14 13:43:10.718967 | 4b75de82-fd48-4833-9f2b-c190de19c7b7 ==============================
+[0m13:43:10.718974 [info ] [MainThread]: Running with dbt=1.2.1
+[0m13:43:10.719185 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/Florian/.dbt', 'send_anonymous_usage_stats': False, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m13:43:10.719259 [debug] [MainThread]: Tracking: do not track
+[0m13:43:11.007647 [debug] [MainThread]: Executing "git --help"
+[0m13:43:11.016196 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m13:43:11.017144 [debug] [MainThread]: STDERR: "b''"
+[0m13:43:11.065135 [debug] [MainThread]: Acquiring new postgres connection "debug"
+[0m13:43:11.065578 [debug] [MainThread]: Using postgres connection "debug"
+[0m13:43:11.065663 [debug] [MainThread]: On debug: select 1 as id
+[0m13:43:11.065739 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:43:11.094363 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 1 seconds.
+Error:
+could not translate host name "host_dev.arkhn.com" to address: nodename nor servname provided, or not known
+
+[0m13:43:12.101700 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m13:43:12.102078 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m13:43:12.102434 [debug] [MainThread]: On debug: No close available on handle
+[0m13:43:12.103128 [debug] [MainThread]: Flushing usage events
+[0m13:43:12.103597 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2022-10-14 13:45:53.446579 | 1246c385-779f-4a01-8882-0d771fc47941 ==============================
+[0m13:45:53.446585 [info ] [MainThread]: Running with dbt=1.2.1
+[0m13:45:53.446778 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/Florian/.dbt', 'send_anonymous_usage_stats': False, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m13:45:53.446852 [debug] [MainThread]: Tracking: do not track
+[0m13:45:53.482412 [debug] [MainThread]: Executing "git --help"
+[0m13:45:53.487426 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m13:45:53.487871 [debug] [MainThread]: STDERR: "b''"
+[0m13:45:53.490647 [debug] [MainThread]: Acquiring new postgres connection "debug"
+[0m13:45:53.491237 [debug] [MainThread]: Using postgres connection "debug"
+[0m13:45:53.491337 [debug] [MainThread]: On debug: select 1 as id
+[0m13:45:53.491407 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:45:53.596910 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 1 seconds.
+Error:
+connection to server at "dev.arkhn.com" (51.159.98.55), port 5432 failed: FATAL:  database "mimiciii" does not exist
+
+[0m13:45:54.661678 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m13:45:54.662135 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m13:45:54.662657 [debug] [MainThread]: On debug: No close available on handle
+[0m13:45:54.663881 [debug] [MainThread]: Flushing usage events
+[0m13:45:54.664465 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2022-10-14 13:47:38.084001 | c6f17894-3fab-4bbc-bfb8-ec2f349b392e ==============================
+[0m13:47:38.084008 [info ] [MainThread]: Running with dbt=1.2.1
+[0m13:47:38.084204 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/Florian/.dbt', 'send_anonymous_usage_stats': False, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'config_dir': False, 'which': 'debug', 'indirect_selection': 'eager'}
+[0m13:47:38.084281 [debug] [MainThread]: Tracking: do not track
+[0m13:47:38.125050 [debug] [MainThread]: Executing "git --help"
+[0m13:47:38.131214 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m13:47:38.131793 [debug] [MainThread]: STDERR: "b''"
+[0m13:47:38.135241 [debug] [MainThread]: Acquiring new postgres connection "debug"
+[0m13:47:38.136517 [debug] [MainThread]: Using postgres connection "debug"
+[0m13:47:38.136658 [debug] [MainThread]: On debug: select 1 as id
+[0m13:47:38.136758 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:47:38.239841 [debug] [MainThread]: SQL status: SELECT 1 in 0.1 seconds
+[0m13:47:38.241092 [debug] [MainThread]: On debug: Close
+[0m13:47:38.241544 [debug] [MainThread]: Flushing usage events
+[0m13:47:38.241836 [debug] [MainThread]: Connection 'debug' was properly closed.
+
+
+============================== 2022-10-14 13:48:12.017805 | da872a37-2cff-4845-9f08-a0197e07aac9 ==============================
+[0m13:48:12.017810 [info ] [MainThread]: Running with dbt=1.2.1
+[0m13:48:12.017998 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/Users/Florian/.dbt', 'send_anonymous_usage_stats': False, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m13:48:12.018101 [debug] [MainThread]: Tracking: do not track
+[0m13:55:59.469347 [debug] [MainThread]: Starter project path: /opt/homebrew/Cellar/dbt-postgres/1.2.1/libexec/lib/python3.9/site-packages/dbt/include/starter_project
+[0m13:57:36.440790 [info ] [MainThread]: 
+Your new dbt project "my_new_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m13:57:36.441150 [debug] [MainThread]: Flushing usage events
